@@ -1,27 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,600&display=swap");
 
-/* Style 9
-   ----------------------------- */
-.nine h1 {
-  text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
-  font-family:"Playfair Display", serif; font-weight:400;
+:root {
+    --headclr: black;
+    --back: linear-gradient(
+        90deg,
+        white 63%,
+        rgb(138, 247, 158) 65%,
+        white 67%
+    );
+    --headback: linear-gradient(
+        90deg,
+        rgb(138, 247, 158) 69%,
+        white 70%,
+        rgb(138, 247, 158) 71%
+    );
 }
-.nine h1 span {
-  margin-top: 5px;
-    font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
-    text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
-
+body {
+    background: url("https://img.freepik.com/premium-vector/abstract-distorted-grid-background-thin-black-line-white_760443-210.jpg?w=2000");
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
+    justify-items: center;
     align-items: center;
+    font-family: "Barlow", sans-serif;
+	
+}
+h2 {
+    font-weight: 600;
+    font-style: italic;
 }
 
-.nine h1 span:after,.nine h1 span:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    height: 5px;
-  background-color:#f8f8f8;
+.ribbon {
+    --r: 0.7em; /* control the cutout of the ribbon */
+    --c: hsl(300, 89%, 72%);
+    margin-top: 0.02em;
+
+    padding-inline: calc(0.5em + var(--r));
+    text-align: center;
+    line-height: 2;
+    /* color: #fff; */
+    background: #d8c0ff;
+    background-position: 0 0.15lh;
+    background-size: 100% 1lh;
+    clip-path: polygon(
+        0 0.15lh,
+        100% 0.15lh,
+        calc(100% - var(--r)) 0.5lh,
+        100% 0.85lh,
+        100% calc(100% - 0.15lh),
+        0 calc(100% - 0.15lh),
+        var(--r) calc(100% - 0.5lh),
+        0 calc(100% - 0.85lh)
+    );
+
+    /* width: fit-content; you may need this in your real use case */
+}
+table {
+    width: 100%;
+}
+th {
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+    text-underline-offset: 0.2em;
+}
+tr:nth-child(even) {
+    background-color: hsla(300, 89%, 72%, 0.436);
+}
+
+.profile {
+    text-align: center;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust to one column */
+    gap: 2rem;
+    background: #d8c0ff;
+    color: black;
+    padding: 3rem;
+    border: 2px solid black;
+    box-shadow: 5px 7px 0px black;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem; /* Add margin to separate the boxes */
+    height: 300px; /* Adjust height as needed */
+    width: 1200px; /* Adjust width as needed */
+    overflow: hidden;
+
+}
+@media (width < 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+.card > h2 {
+    background: #d8c0ff;
+
+    color: var(--headclr);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 2px solid black;
+    box-shadow: 5px 7px 0px black;
+}
+.card {
+    border: 1px solid black;
+    box-shadow: 5px 7px 0px black;
+    padding: 1rem;
+    background-image: var(--back);
+    background-size: 7rem;
+    background-repeat: ;
+    margin-bottom: 1rem; /* Add margin between cards */
+    max-height: calc(100% - 2rem); /* Adjust card height */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for text overflow */
+}
+
+h1,
+
+.profile2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relaive;
+  margin-bottom: 0.02em;
+}
+
+.profile3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relaive;
+  margin-top: 1em;
+}
+
+.profile4 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative; /* corrected typo from relaive to relative */
+  margin-top: 1em;
+  left: -350px;
+}
+
+.profile5 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative; /* corrected typo from relaive to relative */
+  margin-top: 1em;
+  right: -350px;
+  bottom: 445px;
+}
+
+
+
+.profile2 h1 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 50px;
+  margin-top: 0.1em; /* Adjust the margin-top value to reduce space */
+}
+
+h1 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 60px;
+}
+
+.profile2 h3 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 30px;
+  margin-top: 1em; /* Adjust the margin-top value to reduce space */
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 30px;
+}
+
+profile3.logo {
+}
+
+.profile4 h4 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 30px;
+  margin-top: 1em; /* Adjust the margin-top value to reduce space */
+  margin-bottom: 0.5em;
+  left: -200px;
+}
+
+h4 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 30px;
+}
+
+.profile5 h5 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 30px;
+  margin-top: 1em; /* Adjust the margin-top value to reduce space */
+  margin-bottom: 0.5em;
+  right: -200px;
+}
+
+h5 {
+  font-family: "Cute Font", sans-serif;
+  font-size: 30px;
+}
+
+
+.dashboard:first-of-type .profile {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure the container takes full height */
+}
+
+.dashboard:first-of-type .profile img {
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+}
+
+
+
+
+
+/* purple box left */
+
+.menu {
+    position: relative; /* or 'absolute' if you prefer */
+    margin-left: 50px;
+    margin-top: 5px;
+    background-image: url(/Users/Jesella/Desktop/imagestest/textwindow.png);
+    background-repeat: no-repeat, repeat;
+    height: 344px !important;
+    width: 600px !important;
+    left: -380px;
+
+}
+
+
+.menu{
+  height: 400px;
+  width: 400px;
+}
+.menu .text{
+    position: relative;
+  top: 30px;
+  left: 4px;
+   font-family: "Lucida Console", "Courier New", monospace;
+  color: black;
+  overflow: scroll;
+   width: 600px;
+   height: 250px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #c3c7cb;
+    z-index: 1;
+  border-top: 1px solid #c3c7cb;
+    border-left: 1px solid #c3c7cb;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
+}
+::-webkit-scrollbar-thumb, body *::-webkit-scrollbar-button {
+  width: 16px;
+  height: 16px;
+  background: silver;
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+  border: 1px solid;
+  border-color: silver #000 #000 silver;
+}
+:-webkit-scrollbar-track {
+  image-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAyIDIiIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+CjxtZXRhZGF0YT5NYWRlIHdpdGggUGl4ZWxzIHRvIFN2ZyBodHRwczovL2NvZGVwZW4uaW8vc2hzaGF3L3Blbi9YYnh2Tmo8L21ldGFkYXRhPgo8cGF0aCBzdHJva2U9IiNjMGMwYzAiIGQ9Ik0wIDBoMU0xIDFoMSIgLz4KPC9zdmc+");
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: 2px;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTcgNWgxTTYgNmgzTTUgN2g1TTQgOGg3IiAvPgo8L3N2Zz4=");
+}
+
+
+/* purple box right */
+
+/* New menu */
+.menu2 {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 5px;
+    background-image: url(/Users/Jesella/Desktop/imagestest/textwindow.png);
+    background-repeat: no-repeat, repeat;
+    height: 344px !important;
+    width: 600px !important;
+    left: 768px; /* Adjust the left position as needed */
+    bottom: -1018px;
+}
+
+.menu2 .text {
+    position: relative;
+    top: 30px;
+    left: 4px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: black;
+    overflow: scroll;
+    width: 600px;
+    height: 250px;
+}
+
+/*footer*/
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0; /* Positioning the footer on the left */
+    width: 100%; /* Making the footer span the full width of the viewport */
+    background-color: #f1f1f1;
+    padding: 3px; /* Add padding for better spacing */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.profile {
+    margin-right: 10px; /* Add space between the logo and text */
+}
+
+.text {
+    flex-grow: 1; /* Allow the text to grow and take up available space */
+}
+
+.text p {
+    margin: 5px 0; /* Adjust margin top and bottom */
+}
+
+/* Added styling for the back to top link */
+.text a {
+    text-decoration: none; /* Remove default underline */
+    color: blue; /* Change color */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.text a:hover {
+    text-decoration: underline; /* Underline on hover */
 }

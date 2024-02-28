@@ -15,6 +15,10 @@
         rgb(138, 247, 158) 71%
     );
 }
+
+
+/* body */
+
 body {
     background: url("https://img.freepik.com/premium-vector/abstract-distorted-grid-background-thin-black-line-white_760443-210.jpg?w=2000");
     min-height: 100vh;
@@ -24,10 +28,11 @@ body {
     font-family: "Barlow", sans-serif;
 	
 }
-h2 {
-    font-weight: 600;
-    font-style: italic;
-}
+
+
+
+
+/* computer science ribbon */
 
 .ribbon {
     --r: 0.7em; /* control the cutout of the ribbon */
@@ -92,6 +97,12 @@ tr:nth-child(even) {
         grid-template-columns: 1fr;
     }
 }
+
+h2 {
+    font-weight: 600;
+    font-style: italic;
+}
+
 .card > h2 {
     background: #d8c0ff;
 
@@ -115,6 +126,12 @@ tr:nth-child(even) {
 }
 
 h1,
+
+
+
+
+/* profiles */
+
 
 .profile2 {
   display: flex;
@@ -176,6 +193,10 @@ h3 {
   font-size: 30px;
 }
 
+
+/* my logo */
+
+
 profile3.logo {
 }
 
@@ -228,11 +249,11 @@ h5 {
     position: relative; /* or 'absolute' if you prefer */
     margin-left: 50px;
     margin-top: 5px;
-    background-image: url(/imagestest/windowtextbox.png);
+    background-image: url(/Users/Jesella/Desktop/imagestest/windowtextbox.png);
     background-repeat: no-repeat, repeat;
     height: 344px !important;
     width: 600px !important;
-    left: -380px;
+    right: 25%;
 
 }
 
@@ -242,7 +263,7 @@ h5 {
   width: 400px;
 }
 .menu .text{
-    position: relative;
+    position: absolute;
   top: 30px;
   left: 4px;
    font-family: "Lucida Console", "Courier New", monospace;
@@ -291,12 +312,12 @@ h5 {
     position: absolute;
     margin-left: 50px;
     margin-top: 5px;
-    background-image: url(/imagestest/windowtextbox.png);
+    background-image: url(/Users/Jesella/Desktop/imagestest/windowtextbox.png);
     background-repeat: no-repeat, repeat;
     height: 344px !important;
     width: 600px !important;
-    left: 768px; /* Adjust the left position as needed */
-    bottom: -1018px;
+    right: 8%;
+    bottom: -152%;
 }
 
 .menu2 .text {
@@ -326,6 +347,9 @@ footer {
     display: flex;
     align-items: center; /* Align items vertically */
 }
+
+
+/* profile = Title names (Name, Featured Pho) */
 
 .profile {
     margin-right: 10px; /* Add space between the logo and text */
